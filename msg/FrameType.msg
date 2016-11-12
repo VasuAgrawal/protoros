@@ -1,0 +1,2 @@
+int32 KEYFRAME=0
+int32 DELTA=1

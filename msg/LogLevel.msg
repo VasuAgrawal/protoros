@@ -1,0 +1,5 @@
+int32 DEBUG=0
+int32 INFO=1
+int32 WARNING=2
+int32 ERROR=3
+int32 FATAL=4

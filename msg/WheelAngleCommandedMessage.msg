@@ -1,2 +1,2 @@
-Timestamp time
+time time
 float64 angle

@@ -1,3 +1,3 @@
-Timestamp time
+time time
 float64 lat
 float64 long

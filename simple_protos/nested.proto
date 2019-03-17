@@ -1,0 +1,9 @@
+syntax = "proto3";
+import "header.proto";
+import "google/protobuf/duration.proto";
+
+message Nested {
+    Header header = 1;
+    string other = 2;
+    google.protobuf.Duration dur = 3;
+}

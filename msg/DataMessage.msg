@@ -1,9 +1,9 @@
-ImuMessage imu
-GpsMessage gps
-EncoderMessage enc
-WheelAngleCommandedMessage command_angle
-WheelAngleCommandedMessage actual_angle
-LogMessage status
-ImageMessage camera
-DataType data_type
+protoros/ImuMessage imu
+protoros/GpsMessage gps
+protoros/EncoderMessage enc
+protoros/WheelAngleCommandedMessage command_angle
+protoros/WheelAngleCommandedMessage actual_angle
+protoros/LogMessage status
+protoros/ImageMessage camera
+protoros/DataType data_type
 string robot_name

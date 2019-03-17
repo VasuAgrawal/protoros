@@ -75,6 +75,11 @@ class RosMsgField(object):
             self._name_value])
 
 
+    def __eq__(self, other):
+        return (self._type == other._type and
+                self._name == other._name)
+
+
     @classmethod
     def get_primitives(cls):
         return cls._primitives
@@ -132,7 +137,13 @@ class RosMsg(object):
         name = "NODE: %s\n" % self.get_type()
         fields = "\n".join(["\t%s" % str(field) for field in self._fields])
         return name + fields + "\n"
-    
+
+
+    def __eq__(self, other):
+        return (self._message_name.lower() == other._message_name.lower() and
+                all([a == b for (a, b) in zip(self._fields, other._fields)]))
+   
+
     def get_type(self):
         return "/".join([self._package_name, self._message_name])
 
@@ -164,6 +175,12 @@ def parse_messages(lib_dir):
             raise Exception("Unable to find %s" % t)
 
     logging.info("Verified all of the messages in the provided folder")
+
+
+def find_match(to_match):
+    for msg in msgs:
+        if to_match == msg: return msg
+    return None
 
 
 def main():

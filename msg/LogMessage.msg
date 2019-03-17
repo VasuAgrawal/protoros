@@ -1,3 +1,3 @@
 time time
 string text
-LogLevel log_level
+protoros/LogLevel log_level
